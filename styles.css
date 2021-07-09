@@ -72,23 +72,6 @@ img {
     font-size: 24px;
 }
 
-/*Search Box*/
-
-/* #searchbox{
-    position: fixed;
-    right: 0;
-    top: 24px;
-    width: 500px;
-    pointer-events: none;
-    z-index: 50;
-    transition: 0.4s;
-}
-
-#searchbox input{
-    height: 40px;
-    width: 100%;
-} */
-
 nav{
     height: 72px;
     background: #202125;
