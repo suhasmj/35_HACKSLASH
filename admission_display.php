@@ -201,22 +201,6 @@ $mysqli->close();
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
     
 }
-    
-
 </style>
 </head>
-<body>
-
-<form method="get" action="patient_entry2.html">
-    <button class="button button1"  type="submit">Add New Patient Details</button>
-</form>
-<form method="get" action="patient_update.php">
-    <button class="button button2"  type="submit">Edit Patient details</button>
-</form>
-    
-<form method="get" action="selection_page.html">
-    <button class="button button3"  type="submit">Main Menu</button>
-</form>    
-
-</body>
 </html>

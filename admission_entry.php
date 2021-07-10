@@ -64,8 +64,7 @@ if(isset($_POST['save']))
     if (mysqli_query($conn, $sql_query))
     {
         
-        echo "New Details Entry inserted successfully!";
-        header("Location: admission_display.php");
+        echo "Application form subbmitted successfully!";
     }
     
     else
