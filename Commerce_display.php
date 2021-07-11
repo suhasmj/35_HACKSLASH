@@ -20,7 +20,7 @@ if ($mysqli->connect_error) {
 } 
 
 // SQL query to select data from database 
-$sql = "SELECT * FROM Commerce"; 
+$sql = "SELECT * FROM commerce ORDER BY Class_10_percentage DESC"; 
 $result = $mysqli->query($sql); 
 $mysqli->close(); 
 ?> 
@@ -30,7 +30,7 @@ $mysqli->close();
 
 <head> 
 	<meta charset="UTF-8"> 
-	<title>Patient Details Display</title> 
+	<title>Commerce students selected</title> 
 	<!-- CSS FOR STYLING THE PAGE --> 
 	<style> 
 		table { 
@@ -87,7 +87,8 @@ $mysqli->close();
 			<tr> 
 				<!--FETCHING DATA FROM EACH 
 					ROW OF EVERY COLUMN--> 
-				<td><?php echo $rows['First_Name'];?></td> 
+                <td><?php echo $rows['Application_ID'];?></td> 
+				<td><?php echo $rows['Full_Name'];?></td> 
                 <td><?php echo $rows['Father_Name'];?></td>
                 <td><?php echo $rows['Field'];?></td>
                 <td><?php echo $rows['Commerce_Course'];?></td>
@@ -131,45 +132,6 @@ $mysqli->close();
   bottom: -500px;
 }
 
-.button1:hover {
-  background-color: #4CAF50;
-  color: white;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-.button2 {
-  background-color: white; 
-  color: black; 
-  border: 5px solid #008CBA;
-  border-radius: 25px;
-  float: right;
-  position:relative;
-  right: 300px;
-  bottom: -500px;
-}
-  
-.button2:hover {
-  background-color: #008CBA;
-  color: white;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-.button3 {
-  background-color: white; 
-  color: black; 
-  border: 5px solid #008CBA;
-  border-radius: 25px;
-  float: right;
-  position:relative;
-  right: 350px;
-  bottom: -500px;
-}
-  
-.button3:hover {
-  background-color: #008CBA;
-  color: white;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-    
-}
 </style>
 </head>
 </html>

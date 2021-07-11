@@ -20,7 +20,7 @@ if ($mysqli->connect_error) {
 } 
 
 // SQL query to select data from database 
-$sql = "SELECT * FROM Science WHERE Class_10_percentage > "85""; 
+$sql = "SELECT * FROM science ORDER BY Class_10_percentage DESC"; 
 $result = $mysqli->query($sql); 
 $mysqli->close(); 
 ?> 
@@ -30,7 +30,7 @@ $mysqli->close();
 
 <head> 
 	<meta charset="UTF-8"> 
-	<title>Patient Details Display</title> 
+	<title>Science student list</title> 
 	<!-- CSS FOR STYLING THE PAGE --> 
 	<style> 
 		table { 
@@ -68,7 +68,7 @@ $mysqli->close();
 
 <body> 
 	<section> 
-		<h1>STUDENT ADMISSION DETAILS</h1> 
+		<h1>STUDENT ADMISSION DETAILS-Science</h1> 
 		<!-- TABLE CONSTRUCTION--> 
 		<table> 
 			<tr> 
@@ -87,10 +87,11 @@ $mysqli->close();
 			<tr> 
 				<!--FETCHING DATA FROM EACH 
 					ROW OF EVERY COLUMN--> 
-				<td><?php echo $rows['First_Name'];?></td> 
+                <td><?php echo $rows['Application_ID'];?></td> 
+				<td><?php echo $rows['Full_Name'];?></td> 
                 <td><?php echo $rows['Father_Name'];?></td>
                 <td><?php echo $rows['Field'];?></td>
-                <td><?php echo $rows['Science_Course'];?></td>
+                <td><?php echo $rows['Science_course'];?></td>
                 <td><?php echo $rows['Class_10_percentage'];?></td>
 			</tr> 
 			<?php 
