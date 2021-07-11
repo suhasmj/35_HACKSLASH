@@ -20,7 +20,7 @@ if ($mysqli->connect_error) {
 } 
 
 // SQL query to select data from database 
-$sql = "SELECT * FROM science ORDER BY Class_10_percentage DESC"; 
+$sql = "SELECT * FROM science WHERE Class_10_percentage > 85 ORDER BY Class_10_percentage DESC"; 
 $result = $mysqli->query($sql); 
 $mysqli->close(); 
 ?> 
